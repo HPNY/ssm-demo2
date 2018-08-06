@@ -7,9 +7,9 @@
     <update id="reduceNumber">
         <!--具体sql语句-->
         update
-          seckill
+        seckill
         set
-          number = number - 1
+        number = number - 1
         where seckill_id = #{seckillId}
         and start_time  <![CDATA[ <= ]]> #{killTime}
         and end_time >= #{killTime}

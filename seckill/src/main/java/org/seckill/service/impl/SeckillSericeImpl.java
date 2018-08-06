@@ -104,9 +104,9 @@ public class SeckillSericeImpl implements SeckillService {
                     return new SeckillExecution(seckillId, SeckillStatEnum.SUCCESS, successKilled);
                 }
             }
-        }catch (SeckillCloseException e1){
+        } catch (SeckillCloseException e1) {
             throw e1;
-        }catch (RepeatKillException e2){
+        } catch (RepeatKillException e2) {
             throw e2;
         } catch (Exception e) {
             logger.error(e.getMessage(), e);

@@ -1,11 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!--引入jstl-->
-<%@include file="common/tag.jsp"%>
+<%@include file="common/tag.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title>秒杀列表页</title>
-    <%@include file="common/head.jsp"%>
+    <%@include file="common/head.jsp" %>
 </head>
 <body>
 <!--页面显示部分-->
@@ -27,24 +27,24 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <c:forEach var="sk" items="${list}">
-                        <tr>
-                            <td>${sk.name}</td>
-                            <td>${sk.number}</td>
-                            <td>
-                                <fmt:formatDate value="${sk.startTime}" pattern="yyy-MM-dd HH:mm:ss"/>
-                            </td>
-                            <td>
-                                <fmt:formatDate value="${sk.endTime}" pattern="yyy-MM-dd HH:mm:ss"/>
-                            </td>
-                            <td>
-                                <fmt:formatDate value="${sk.createTime}" pattern="yyy-MM-dd HH:mm:ss"/>
-                            </td>
-                            <td>
-                                <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">link</a>
-                            </td>
-                        </tr>
-                    </c:forEach>
+                <c:forEach var="sk" items="${list}">
+                    <tr>
+                        <td>${sk.name}</td>
+                        <td>${sk.number}</td>
+                        <td>
+                            <fmt:formatDate value="${sk.startTime}" pattern="yyy-MM-dd HH:mm:ss"/>
+                        </td>
+                        <td>
+                            <fmt:formatDate value="${sk.endTime}" pattern="yyy-MM-dd HH:mm:ss"/>
+                        </td>
+                        <td>
+                            <fmt:formatDate value="${sk.createTime}" pattern="yyy-MM-dd HH:mm:ss"/>
+                        </td>
+                        <td>
+                            <a class="btn btn-info" href="/seckill/${sk.seckillId}/detail" target="_blank">link</a>
+                        </td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
         </div>
